@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "SSRestManager.h"
+#import "WebServiceManager.h"
+#import "RootVC.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -43,16 +44,17 @@
 }
 #pragma mark Background fetch handler
 -(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
- 	SSRestManager *restManager = [[SSRestManager alloc] init];
-    [restManager getJsonResponseFromBaseUrl:@"https://dl.dropboxusercontent.com" query:@"/u/90940570/emp.json" onCompletion:^(NSDictionary *json) {
-        if (json) {
-            completionHandler(UIBackgroundFetchResultNewData);
-        }else {
-            completionHandler(UIBackgroundFetchResultNoData);
-        }
-    } onError:^(NSError *error) {
+    [WebServiceManager fetchEmployeeListOnCompletion:^(NSArray *fullList, NSError *error) {
         if (error) {
+            // show error
             completionHandler(UIBackgroundFetchResultFailed);
+            
+        }else {
+            if ([self.window.rootViewController isKindOfClass:([RootVC class])]) {
+                RootVC *rootVC = (RootVC *)self.window.rootViewController;
+                [rootVC refreshUIWithDataSource:fullList];
+            }
+            completionHandler(UIBackgroundFetchResultNewData);
         }
     }];
 }

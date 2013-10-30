@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface RootVC : UIViewController
-
+- (void)refreshUIWithDataSource:(NSArray *)list;
 @end

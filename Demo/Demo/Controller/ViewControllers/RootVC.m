@@ -19,17 +19,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[self fetchData];
+}
+- (void)fetchData {
     [WebServiceManager fetchEmployeeListOnCompletion:^(NSArray *fullList, NSError *error) {
         if (error) {
-            // show error
+                // show error
             NSLog(@"Error : %@",error);
         }else {
-            self.empList = fullList;
-            [self.tableView reloadData];
+            [self refreshUIWithDataSource:fullList];
         }
     }];
 }
-
+- (void)refreshUIWithDataSource:(NSArray *)list {
+    self.empList = list;
+    [self.tableView reloadData];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
