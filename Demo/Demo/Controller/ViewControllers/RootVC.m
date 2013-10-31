@@ -17,10 +17,12 @@
 
 @implementation RootVC
 
+#pragma mark view methods
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[self fetchData];
 }
+#pragma mark UI refreshing data source
 - (void)fetchData {
     [WebServiceManager fetchEmployeeListOnCompletion:^(NSArray *fullList, NSError *error) {
         if (error) {
@@ -35,6 +37,7 @@
     self.empList = list;
     [self.tableView reloadData];
 }
+#pragma mark memory warnings
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

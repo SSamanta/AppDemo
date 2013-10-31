@@ -9,11 +9,11 @@
 #import "WebServiceManager.h"
 #import "SSRestManager.h"
 #import "Employee.h"
-
+#import "AppConstants.h"
 @implementation WebServiceManager
 +(void)fetchEmployeeListOnCompletion:(EmployeeListCompletionHandler )handler {
     SSRestManager *restManager = [[SSRestManager alloc] init];
-    [restManager getJsonResponseFromBaseUrl:@"https://dl.dropboxusercontent.com" query:@"/u/90940570/emp.json" onCompletion:^(NSDictionary *json) {
+    [restManager getJsonResponseFromBaseUrl:kBaseURL query:@"/u/90940570/emp.json" onCompletion:^(NSDictionary *json) {
         if (json) {
             NSArray *empList = json[@"list_emp"];
             NSMutableArray *empFullList = [[NSMutableArray alloc] init];
