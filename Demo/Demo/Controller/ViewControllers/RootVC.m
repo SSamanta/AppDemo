@@ -11,6 +11,8 @@
 #import "App.h"
 #import "CustomAppCell.h"
 #import "AppDetailsVC.h"
+#import "UtilityManager.h"
+
 @interface RootVC ()
 @property (nonatomic) NSArray *apps;
 @property (weak,nonatomic) IBOutlet UITableView *tableView;
@@ -34,7 +36,8 @@
             NSLog(@"Error : %@",error);
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         }else {
-            [self refreshUIWithDataSource:fullList];
+            [UtilityManager archiveAppToLocalFile:fullList];
+            [self refreshUIWithDataSource:[UtilityManager getAppsFromLocalFile]];
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         }
     }];

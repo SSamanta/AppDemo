@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface UtilityManager : NSObject
-
++(void)archiveAppToLocalFile:(NSArray *)apps;
++(NSArray *)getAppsFromLocalFile;
 @end
