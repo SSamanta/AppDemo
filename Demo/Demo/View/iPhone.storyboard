@@ -86,7 +86,13 @@
                             <constraint firstAttribute="bottom" secondItem="0hp-14-prR" secondAttribute="bottom" id="yvg-6g-II0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Jf3-Vh-QQp"/>
+                    <navigationItem key="navigationItem" id="Jf3-Vh-QQp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="DzX-SV-eqb">
+                            <connections>
+                                <action selector="refresh:" destination="WSu-n7-9Ry" id="KqB-TN-mtY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="0hp-14-prR" id="Xps-OW-1oi"/>
                     </connections>

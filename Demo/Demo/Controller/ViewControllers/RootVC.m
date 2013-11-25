@@ -14,6 +14,7 @@
 @interface RootVC ()
 @property (nonatomic) NSArray *apps;
 @property (weak,nonatomic) IBOutlet UITableView *tableView;
+- (IBAction)refresh:(id)sender;
 @end
 
 @implementation RootVC
@@ -26,18 +27,25 @@
 }
 #pragma mark UI refreshing data source
 - (void)fetchData {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [WebServiceManager fetchAppsOnCompletion:^(NSArray *fullList, NSError *error) {
         if (error) {
                 // show error
             NSLog(@"Error : %@",error);
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         }else {
             [self refreshUIWithDataSource:fullList];
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         }
     }];
 }
 - (void)refreshUIWithDataSource:(NSArray *)list {
     self.apps = list;
     [self.tableView reloadData];
+}
+- (IBAction)refresh:(id)sender {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [self fetchData];
 }
 #pragma mark memory warnings
 - (void)didReceiveMemoryWarning {
