@@ -107,23 +107,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0f-JT-xnI">
-                                <rect key="frame" x="0.0" y="63" width="320" height="568"/>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zIa-ow-L9q">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Q0f-JT-xnI" secondAttribute="bottom" constant="-63" id="GZM-6i-zd5"/>
-                            <constraint firstItem="Q0f-JT-xnI" firstAttribute="top" secondItem="2bO-Bj-xjw" secondAttribute="top" constant="63" id="M2L-6v-Nws"/>
-                            <constraint firstItem="Q0f-JT-xnI" firstAttribute="leading" secondItem="2bO-Bj-xjw" secondAttribute="leading" id="fUa-bC-1Pb"/>
-                            <constraint firstAttribute="trailing" secondItem="Q0f-JT-xnI" secondAttribute="trailing" id="ro7-I5-aeP"/>
+                            <constraint firstItem="zIa-ow-L9q" firstAttribute="leading" secondItem="2bO-Bj-xjw" secondAttribute="leading" id="0al-Ve-Imh"/>
+                            <constraint firstAttribute="bottom" secondItem="zIa-ow-L9q" secondAttribute="bottom" id="5s0-ZA-Rie"/>
+                            <constraint firstAttribute="trailing" secondItem="zIa-ow-L9q" secondAttribute="trailing" id="Rh1-Yo-BX5"/>
+                            <constraint firstItem="zIa-ow-L9q" firstAttribute="top" secondItem="2bO-Bj-xjw" secondAttribute="top" id="ahc-5E-5f0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lht-Bd-nXU"/>
                     <connections>
-                        <outlet property="webView" destination="Q0f-JT-xnI" id="CA7-G2-vyt"/>
+                        <outlet property="webView" destination="zIa-ow-L9q" id="2nx-O5-TtD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOy-7N-jUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
