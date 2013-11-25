@@ -44,7 +44,7 @@
 }
 #pragma mark Background fetch handler
 -(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
-    [WebServiceManager fetchEmployeeListOnCompletion:^(NSArray *fullList, NSError *error) {
+    [WebServiceManager fetchAppsOnCompletion:^(NSArray *fullList, NSError *error) {
         if (error) {
             // show error
             completionHandler(UIBackgroundFetchResultFailed);

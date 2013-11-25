@@ -8,20 +8,20 @@
 
 #import "WebServiceManager.h"
 #import "SSRestManager.h"
-#import "Employee.h"
+#import "App.h"
 #import "AppConstants.h"
 @implementation WebServiceManager
-+(void)fetchEmployeeListOnCompletion:(EmployeeListCompletionHandler )handler {
++(void)fetchAppsOnCompletion:(FetchAppsCompletionHandler )handler {
     SSRestManager *restManager = [[SSRestManager alloc] init];
-    [restManager getJsonResponseFromBaseUrl:kBaseURL query:@"/u/90940570/emp.json" onCompletion:^(NSDictionary *json) {
+    [restManager getJsonResponseFromBaseUrl:kBaseURL query:@"/us/rss/topfreeapplications/limit=300/json" onCompletion:^(NSDictionary *json) {
         if (json) {
-            NSArray *empList = json[@"list_emp"];
-            NSMutableArray *empFullList = [[NSMutableArray alloc] init];
-            [empList enumerateObjectsUsingBlock:^(NSDictionary *empDict, NSUInteger idx, BOOL *stop) {
-                Employee *emp = [[Employee alloc] initWithDictionary:empDict];
-                [empFullList addObject:emp];
+            NSArray *apps = json[@"feed"][@"entry"];
+            NSMutableArray *appsFullList = [[NSMutableArray alloc] init];
+            [apps enumerateObjectsUsingBlock:^(NSDictionary *appDict, NSUInteger idx, BOOL *stop) {
+                App *app = [[App alloc] initWithDictionary:appDict];
+                [appsFullList addObject:app];
             }];
-            handler (empFullList,nil);
+            handler (appsFullList,nil);
         }
     } onError:^(NSError *error) {
         if (error) {

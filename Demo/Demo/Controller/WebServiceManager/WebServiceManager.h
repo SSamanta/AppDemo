@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-typedef void (^EmployeeListCompletionHandler)(id object, NSError *error);
+typedef void (^FetchAppsCompletionHandler)(id object, NSError *error);
 @interface WebServiceManager : NSObject
-+(void)fetchEmployeeListOnCompletion:(EmployeeListCompletionHandler )handler;
++(void)fetchAppsOnCompletion:(FetchAppsCompletionHandler )handler;
 @end

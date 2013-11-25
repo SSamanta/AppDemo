@@ -1,1 +1,1 @@
-#define kBaseURL	@"https://dl.dropboxusercontent.com"
+#define kBaseURL	@"http://itunes.apple.com"

@@ -30,8 +30,6 @@
 		556A1FC118210F89008B9788 /* SSRestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 556A1FBB18210F89008B9788 /* SSRestManager.m */; };
 		556A1FC7182122B6008B9788 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556A1FC6182122B6008B9788 /* iPhone.storyboard */; };
 		556A1FC8182122B6008B9788 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556A1FC6182122B6008B9788 /* iPhone.storyboard */; };
-		556A1FCB182122E2008B9788 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 556A1FCA182122E2008B9788 /* Employee.m */; };
-		556A1FCC182122E2008B9788 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 556A1FCA182122E2008B9788 /* Employee.m */; };
 		556A1FD01821236C008B9788 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 556A1FCD1821236C008B9788 /* Default-568h@2x.png */; };
 		556A1FD11821236C008B9788 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 556A1FCD1821236C008B9788 /* Default-568h@2x.png */; };
 		556A1FD21821236C008B9788 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 556A1FCE1821236C008B9788 /* Default.png */; };
@@ -44,6 +42,7 @@
 		556A1FDF182128AC008B9788 /* WebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 556A1FDD182128AC008B9788 /* WebServiceManager.m */; };
 		556A1FE3182128F3008B9788 /* UtilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 556A1FE2182128F3008B9788 /* UtilityManager.m */; };
 		556A1FE4182128F3008B9788 /* UtilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 556A1FE2182128F3008B9788 /* UtilityManager.m */; };
+		5576742A1843653400A7E92F /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 557674291843653400A7E92F /* App.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +80,6 @@
 		556A1FBA18210F89008B9788 /* SSRestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSRestManager.h; sourceTree = "<group>"; };
 		556A1FBB18210F89008B9788 /* SSRestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSRestManager.m; sourceTree = "<group>"; };
 		556A1FC6182122B6008B9788 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
-		556A1FC9182122E2008B9788 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
-		556A1FCA182122E2008B9788 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		556A1FCD1821236C008B9788 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		556A1FCE1821236C008B9788 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		556A1FCF1821236C008B9788 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -92,6 +89,8 @@
 		556A1FDD182128AC008B9788 /* WebServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceManager.m; sourceTree = "<group>"; };
 		556A1FE1182128F3008B9788 /* UtilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityManager.h; sourceTree = "<group>"; };
 		556A1FE2182128F3008B9788 /* UtilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilityManager.m; sourceTree = "<group>"; };
+		557674281843653300A7E92F /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
+		557674291843653400A7E92F /* App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,8 +231,8 @@
 		556A1FAA182104F6008B9788 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				556A1FC9182122E2008B9788 /* Employee.h */,
-				556A1FCA182122E2008B9788 /* Employee.m */,
+				557674281843653300A7E92F /* App.h */,
+				557674291843653400A7E92F /* App.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -403,10 +402,10 @@
 				556A1FB2182104F6008B9788 /* main.m in Sources */,
 				556A1FC018210F89008B9788 /* SSRestManager.m in Sources */,
 				556A1FAC182104F6008B9788 /* AppDelegate.m in Sources */,
+				5576742A1843653400A7E92F /* App.m in Sources */,
 				556A1FBC18210F89008B9788 /* SSConnectionManager.m in Sources */,
 				556A1FE3182128F3008B9788 /* UtilityManager.m in Sources */,
 				556A1FBE18210F89008B9788 /* SSJsonResponseHandler.m in Sources */,
-				556A1FCB182122E2008B9788 /* Employee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +419,6 @@
 				556A1FC118210F89008B9788 /* SSRestManager.m in Sources */,
 				556A1FBD18210F89008B9788 /* SSConnectionManager.m in Sources */,
 				556A1FB3182104F6008B9788 /* main.m in Sources */,
-				556A1FCC182122E2008B9788 /* Employee.m in Sources */,
 				556A1FDF182128AC008B9788 /* WebServiceManager.m in Sources */,
 				556A1FBF18210F89008B9788 /* SSJsonResponseHandler.m in Sources */,
 				556A1F951821032E008B9788 /* DemoTests.m in Sources */,
@@ -461,7 +459,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -501,7 +498,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -560,7 +556,6 @@
 		556A1F9C1821032E008B9788 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -583,7 +578,6 @@
 		556A1F9D1821032E008B9788 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

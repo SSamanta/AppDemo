@@ -8,10 +8,10 @@
 
 #import "RootVC.h"
 #import "WebServiceManager.h"
-#import "Employee.h"
+#import "App.h"
 
 @interface RootVC ()
-@property (nonatomic) NSArray *empList;
+@property (nonatomic) NSArray *apps;
 @property (weak,nonatomic) IBOutlet UITableView *tableView;
 @end
 
@@ -24,7 +24,7 @@
 }
 #pragma mark UI refreshing data source
 - (void)fetchData {
-    [WebServiceManager fetchEmployeeListOnCompletion:^(NSArray *fullList, NSError *error) {
+    [WebServiceManager fetchAppsOnCompletion:^(NSArray *fullList, NSError *error) {
         if (error) {
                 // show error
             NSLog(@"Error : %@",error);
@@ -34,7 +34,7 @@
     }];
 }
 - (void)refreshUIWithDataSource:(NSArray *)list {
-    self.empList = list;
+    self.apps = list;
     [self.tableView reloadData];
 }
 #pragma mark memory warnings
@@ -44,13 +44,13 @@
 
 #pragma mark TableView Data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.empList.count;
+    return self.apps.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EmpCell" forIndexPath:indexPath];
-    Employee *emp = self.empList[indexPath.row];
-    cell.textLabel.text = emp.empName;
-    cell.detailTextLabel.text = emp.empId;
+    App *app = self.apps[indexPath.row];
+    cell.textLabel.text = app.appName;
+    cell.detailTextLabel.text = app.appCategoryName;
     return cell;
 }
 @end
