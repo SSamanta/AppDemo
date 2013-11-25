@@ -11,5 +11,6 @@
 @interface App : NSObject
 @property (nonatomic) NSString *appName;
 @property (nonatomic) NSString *appCategoryName;
+@property (nonatomic) NSString *appIconLink;
 - (id)initWithDictionary:(NSDictionary *)dict;
 @end

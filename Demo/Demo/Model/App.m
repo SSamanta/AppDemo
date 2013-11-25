@@ -13,6 +13,8 @@
     if (self = [super init]) {
         self.appName = dict [@"im:name"][@"label"];
         self.appCategoryName = dict [@"category"][@"attributes"][@"label"];
+        NSArray *images = dict [@"im:image"];
+        self.appIconLink = images[0][@"label"];
     }
     return self;
 }

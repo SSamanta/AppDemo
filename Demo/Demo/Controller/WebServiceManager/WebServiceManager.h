@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-typedef void (^FetchAppsCompletionHandler)(id object, NSError *error);
+typedef void (^FetchCompletionHandler)(id object, NSError *error);
 @interface WebServiceManager : NSObject
-+(void)fetchAppsOnCompletion:(FetchAppsCompletionHandler )handler;
++(void)fetchAppsOnCompletion:(FetchCompletionHandler )handler;
++ (void)fetchImageDataWithLink:(NSString *)imageLink OnCompletion:(FetchCompletionHandler)handler;
 @end

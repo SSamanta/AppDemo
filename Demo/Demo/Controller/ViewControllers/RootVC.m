@@ -9,7 +9,7 @@
 #import "RootVC.h"
 #import "WebServiceManager.h"
 #import "App.h"
-
+#import "CustomAppCell.h"
 @interface RootVC ()
 @property (nonatomic) NSArray *apps;
 @property (weak,nonatomic) IBOutlet UITableView *tableView;
@@ -20,6 +20,7 @@
 #pragma mark view methods
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Free App";
 	[self fetchData];
 }
 #pragma mark UI refreshing data source
@@ -47,10 +48,9 @@
     return self.apps.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EmpCell" forIndexPath:indexPath];
+    CustomAppCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomAppCell" forIndexPath:indexPath];
     App *app = self.apps[indexPath.row];
-    cell.textLabel.text = app.appName;
-    cell.detailTextLabel.text = app.appCategoryName;
+    [cell setUIWithDataSource:app];
     return cell;
 }
 @end

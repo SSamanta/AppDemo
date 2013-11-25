@@ -43,6 +43,8 @@
 		556A1FE3182128F3008B9788 /* UtilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 556A1FE2182128F3008B9788 /* UtilityManager.m */; };
 		556A1FE4182128F3008B9788 /* UtilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 556A1FE2182128F3008B9788 /* UtilityManager.m */; };
 		5576742A1843653400A7E92F /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 557674291843653400A7E92F /* App.m */; };
+		5576742D18436BEA00A7E92F /* CustomAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5576742C18436BEA00A7E92F /* CustomAppCell.m */; };
+		5576742E18436BEA00A7E92F /* CustomAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5576742C18436BEA00A7E92F /* CustomAppCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		556A1FE2182128F3008B9788 /* UtilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilityManager.m; sourceTree = "<group>"; };
 		557674281843653300A7E92F /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
 		557674291843653400A7E92F /* App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
+		5576742B18436BEA00A7E92F /* CustomAppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAppCell.h; sourceTree = "<group>"; };
+		5576742C18436BEA00A7E92F /* CustomAppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAppCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				556A1FC6182122B6008B9788 /* iPhone.storyboard */,
+				5576742B18436BEA00A7E92F /* CustomAppCell.h */,
+				5576742C18436BEA00A7E92F /* CustomAppCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -401,6 +407,7 @@
 				556A1FDA18212894008B9788 /* RootVC.m in Sources */,
 				556A1FB2182104F6008B9788 /* main.m in Sources */,
 				556A1FC018210F89008B9788 /* SSRestManager.m in Sources */,
+				5576742D18436BEA00A7E92F /* CustomAppCell.m in Sources */,
 				556A1FAC182104F6008B9788 /* AppDelegate.m in Sources */,
 				5576742A1843653400A7E92F /* App.m in Sources */,
 				556A1FBC18210F89008B9788 /* SSConnectionManager.m in Sources */,
@@ -417,6 +424,7 @@
 				556A1FDB18212894008B9788 /* RootVC.m in Sources */,
 				556A1FAD182104F6008B9788 /* AppDelegate.m in Sources */,
 				556A1FC118210F89008B9788 /* SSRestManager.m in Sources */,
+				5576742E18436BEA00A7E92F /* CustomAppCell.m in Sources */,
 				556A1FBD18210F89008B9788 /* SSConnectionManager.m in Sources */,
 				556A1FB3182104F6008B9788 /* main.m in Sources */,
 				556A1FDF182128AC008B9788 /* WebServiceManager.m in Sources */,

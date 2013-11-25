@@ -11,7 +11,7 @@
 #import "App.h"
 #import "AppConstants.h"
 @implementation WebServiceManager
-+(void)fetchAppsOnCompletion:(FetchAppsCompletionHandler )handler {
++(void)fetchAppsOnCompletion:(FetchCompletionHandler )handler {
     SSRestManager *restManager = [[SSRestManager alloc] init];
     [restManager getJsonResponseFromBaseUrl:kBaseURL query:@"/us/rss/topfreeapplications/limit=300/json" onCompletion:^(NSDictionary *json) {
         if (json) {
@@ -27,6 +27,14 @@
         if (error) {
             handler(nil,error);
         }
+    }];
+}
++ (void)fetchImageDataWithLink:(NSString *)imageLink OnCompletion:(FetchCompletionHandler)handler {
+    SSRestManager *restManager = [[SSRestManager alloc] init];
+    [restManager getServiceResponseWithBaseUrl:imageLink query:nil onCompletion:^(id responseData, NSURLResponse *reponse) {
+        handler (responseData,nil);
+    } onError:^(NSError *error) {
+        handler (nil,error);
     }];
 }
 @end

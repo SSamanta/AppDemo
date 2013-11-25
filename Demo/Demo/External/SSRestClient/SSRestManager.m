@@ -29,7 +29,8 @@
 }
 
 - (void)getServiceResponseWithBaseUrl:(NSString *)baseUrl query:(NSString *)queryString onCompletion:(SSServiceResponseHandler )serviceHandler onError:(SSErrorHandler)errorHandler {
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:queryString relativeToURL:[NSURL URLWithString:baseUrl]]];
+    NSURL *url =  queryString ? [NSURL URLWithString:queryString relativeToURL:[NSURL URLWithString:baseUrl]] : [NSURL URLWithString:baseUrl];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [NSURLConnection sendAsynchronousRequest:(NSURLRequest *)request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         if (error) {
             errorHandler (error);
