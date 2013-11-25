@@ -12,5 +12,6 @@
 @property (nonatomic) NSString *appName;
 @property (nonatomic) NSString *appCategoryName;
 @property (nonatomic) NSString *appIconLink;
+@property (nonatomic) NSString *appDetailsLink;
 - (id)initWithDictionary:(NSDictionary *)dict;
 @end

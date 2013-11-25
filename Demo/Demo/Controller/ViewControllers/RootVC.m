@@ -10,6 +10,7 @@
 #import "WebServiceManager.h"
 #import "App.h"
 #import "CustomAppCell.h"
+#import "AppDetailsVC.h"
 @interface RootVC ()
 @property (nonatomic) NSArray *apps;
 @property (weak,nonatomic) IBOutlet UITableView *tableView;
@@ -20,7 +21,7 @@
 #pragma mark view methods
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Free App";
+    self.title = @"Free Apps";
 	[self fetchData];
 }
 #pragma mark UI refreshing data source
@@ -53,4 +54,11 @@
     [cell setUIWithDataSource:app];
     return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    AppDetailsVC *appDetailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"AppDetailsVC"];
+    App *app = self.apps[indexPath.row];
+    [self.navigationController pushViewController:appDetailsVC animated:YES];
+    [appDetailsVC setDataSource:app];
+}
+
 @end

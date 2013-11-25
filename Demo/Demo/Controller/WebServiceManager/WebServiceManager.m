@@ -13,7 +13,7 @@
 @implementation WebServiceManager
 +(void)fetchAppsOnCompletion:(FetchCompletionHandler )handler {
     SSRestManager *restManager = [[SSRestManager alloc] init];
-    [restManager getJsonResponseFromBaseUrl:kBaseURL query:@"/us/rss/topfreeapplications/limit=300/json" onCompletion:^(NSDictionary *json) {
+    [restManager getJsonResponseFromBaseUrl:kBaseURL query:@"/us/rss/topfreeapplications/limit=100/json" onCompletion:^(NSDictionary *json) {
         if (json) {
             NSArray *apps = json[@"feed"][@"entry"];
             NSMutableArray *appsFullList = [[NSMutableArray alloc] init];

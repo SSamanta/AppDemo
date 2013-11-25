@@ -15,6 +15,7 @@
         self.appCategoryName = dict [@"category"][@"attributes"][@"label"];
         NSArray *images = dict [@"im:image"];
         self.appIconLink = images[0][@"label"];
+        self.appDetailsLink = dict [@"link"][@"attributes"][@"href"];
     }
     return self;
 }

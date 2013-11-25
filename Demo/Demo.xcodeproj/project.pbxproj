@@ -45,6 +45,8 @@
 		5576742A1843653400A7E92F /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 557674291843653400A7E92F /* App.m */; };
 		5576742D18436BEA00A7E92F /* CustomAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5576742C18436BEA00A7E92F /* CustomAppCell.m */; };
 		5576742E18436BEA00A7E92F /* CustomAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5576742C18436BEA00A7E92F /* CustomAppCell.m */; };
+		55767431184382BC00A7E92F /* AppDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55767430184382BC00A7E92F /* AppDetailsVC.m */; };
+		55767432184382BC00A7E92F /* AppDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55767430184382BC00A7E92F /* AppDetailsVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		557674291843653400A7E92F /* App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
 		5576742B18436BEA00A7E92F /* CustomAppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAppCell.h; sourceTree = "<group>"; };
 		5576742C18436BEA00A7E92F /* CustomAppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAppCell.m; sourceTree = "<group>"; };
+		5576742F184382BC00A7E92F /* AppDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsVC.h; sourceTree = "<group>"; };
+		55767430184382BC00A7E92F /* AppDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +274,8 @@
 			children = (
 				556A1FD718212894008B9788 /* RootVC.h */,
 				556A1FD818212894008B9788 /* RootVC.m */,
+				5576742F184382BC00A7E92F /* AppDetailsVC.h */,
+				55767430184382BC00A7E92F /* AppDetailsVC.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				556A1FAC182104F6008B9788 /* AppDelegate.m in Sources */,
 				5576742A1843653400A7E92F /* App.m in Sources */,
 				556A1FBC18210F89008B9788 /* SSConnectionManager.m in Sources */,
+				55767431184382BC00A7E92F /* AppDetailsVC.m in Sources */,
 				556A1FE3182128F3008B9788 /* UtilityManager.m in Sources */,
 				556A1FBE18210F89008B9788 /* SSJsonResponseHandler.m in Sources */,
 			);
@@ -428,6 +435,7 @@
 				556A1FBD18210F89008B9788 /* SSConnectionManager.m in Sources */,
 				556A1FB3182104F6008B9788 /* main.m in Sources */,
 				556A1FDF182128AC008B9788 /* WebServiceManager.m in Sources */,
+				55767432184382BC00A7E92F /* AppDetailsVC.m in Sources */,
 				556A1FBF18210F89008B9788 /* SSJsonResponseHandler.m in Sources */,
 				556A1F951821032E008B9788 /* DemoTests.m in Sources */,
 			);
