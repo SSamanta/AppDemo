@@ -28,25 +28,42 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chU-6G-h9X">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chU-6G-h9X">
                                                     <rect key="frame" x="83" y="3" width="198" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="LVT-uH-0oj"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="18"/>
                                                     <color key="textColor" red="0.60392156860000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQ0-NV-eVV">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQ0-NV-eVV">
                                                     <rect key="frame" x="83" y="37" width="198" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS-Italic" family="Trebuchet MS" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p0V-Hl-i7F">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p0V-Hl-i7F">
                                                     <rect key="frame" x="10" y="3" width="65" height="55"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="chU-6G-h9X" secondAttribute="trailing" constant="6" id="0vP-Kp-k1E"/>
+                                                <constraint firstItem="chU-6G-h9X" firstAttribute="top" secondItem="p0V-Hl-i7F" secondAttribute="top" id="1JQ-WJ-bYh"/>
+                                                <constraint firstItem="chU-6G-h9X" firstAttribute="leading" secondItem="p0V-Hl-i7F" secondAttribute="trailing" constant="8" id="Bns-Lx-cUy"/>
+                                                <constraint firstItem="chU-6G-h9X" firstAttribute="top" secondItem="eZ0-VE-Bch" secondAttribute="top" constant="3" id="Ekg-Zq-lBM"/>
+                                                <constraint firstItem="chU-6G-h9X" firstAttribute="leading" secondItem="eZ0-VE-Bch" secondAttribute="leading" constant="83" id="K3w-pk-hSJ"/>
+                                                <constraint firstItem="chU-6G-h9X" firstAttribute="trailing" secondItem="fQ0-NV-eVV" secondAttribute="trailing" id="Mxi-in-DAi"/>
+                                                <constraint firstItem="p0V-Hl-i7F" firstAttribute="leading" secondItem="eZ0-VE-Bch" secondAttribute="leading" constant="10" id="SDc-eu-vPw"/>
+                                                <constraint firstAttribute="bottom" secondItem="p0V-Hl-i7F" secondAttribute="bottom" constant="6" id="d3b-bC-vpH"/>
+                                                <constraint firstItem="chU-6G-h9X" firstAttribute="leading" secondItem="p0V-Hl-i7F" secondAttribute="trailing" constant="8" symbolic="YES" id="fCo-7l-aDm"/>
+                                                <constraint firstItem="p0V-Hl-i7F" firstAttribute="bottom" secondItem="fQ0-NV-eVV" secondAttribute="bottom" id="fRZ-Ov-7wV"/>
+                                                <constraint firstItem="chU-6G-h9X" firstAttribute="leading" secondItem="fQ0-NV-eVV" secondAttribute="leading" id="k8q-Jh-TB8"/>
+                                                <constraint firstItem="fQ0-NV-eVV" firstAttribute="top" secondItem="chU-6G-h9X" secondAttribute="bottom" constant="3" id="v5Q-Ei-TaQ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="appCategoryNameLbl" destination="fQ0-NV-eVV" id="gIP-8V-gem"/>
