@@ -10,6 +10,9 @@
 
 @interface App : NSObject
 @property (nonatomic) NSString *appName;
+@property (nonatomic) NSString *appTitle;
+@property (nonatomic) NSString *appRights;
+@property (nonatomic) NSString *appDescription;
 @property (nonatomic) NSString *appCategoryName;
 @property (nonatomic) NSString *appIconLink;
 @property (nonatomic) NSString *appDetailsLink;

@@ -9,7 +9,9 @@
 #import "AppDetailsVC.h"
 
 @interface AppDetailsVC ()
-@property (weak,nonatomic) IBOutlet UIWebView *webView;
+@property (weak,nonatomic) IBOutlet UILabel *appTitleLbl;
+@property (weak,nonatomic) IBOutlet UILabel *appRightsLbl;
+@property (weak,nonatomic) IBOutlet UILabel *appDescriptionLbl;
 @property (nonatomic) App *app;
 @end
 
@@ -17,11 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self refershUI];
+    [self setDetailsUI];
 }
-- (void)refershUI {
-    self.title =  self.app.appName;
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.app.appDetailsLink]]];
+- (void)setDetailsUI {
+    self.title = self.app.appName;
+    self.appTitleLbl.text = self.app.appTitle;
+    self.appRightsLbl.text = [NSString stringWithFormat:@"By %@", self.app.appRights];
+    self.appDescriptionLbl.text = self.app.appDescription;
 }
 - (void)setDataSource:(App*)app {
     self.app = app;
