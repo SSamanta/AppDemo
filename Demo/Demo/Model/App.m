@@ -35,7 +35,7 @@
         self.appRights = dict [ kRightsKey][kLabelKey];
         self.appDescription = dict [kSummaryKey] [kLabelKey];
         NSArray *images = dict [kImageKey];
-        self.appIconLink = images[0][kLabelKey];
+        self.appIconLink = images[images.count-1][kLabelKey];
         self.appDetailsLink = dict [kLinkKey][kAttributesKey][kHREFKey];
     }
     return self;

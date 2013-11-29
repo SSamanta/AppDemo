@@ -35,6 +35,7 @@
                 // show error
             NSLog(@"Error : %@",error);
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            [self refreshUIWithDataSource:[UtilityManager getAppsFromLocalFile]];
         }else {
             [UtilityManager archiveAppToLocalFile:fullList];
             [self refreshUIWithDataSource:[UtilityManager getAppsFromLocalFile]];

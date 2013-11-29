@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "WebServiceManager.h"
 #import "RootVC.h"
+#import "UtilityManager.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -48,11 +50,11 @@
         if (error) {
             // show error
             completionHandler(UIBackgroundFetchResultFailed);
-            
         }else {
             if ([self.window.rootViewController isKindOfClass:([RootVC class])]) {
+                 [UtilityManager archiveAppToLocalFile:fullList];
                 RootVC *rootVC = (RootVC *)self.window.rootViewController;
-                [rootVC refreshUIWithDataSource:fullList];
+                [rootVC refreshUIWithDataSource:[UtilityManager getAppsFromLocalFile]];
             }
             completionHandler(UIBackgroundFetchResultNewData);
         }
