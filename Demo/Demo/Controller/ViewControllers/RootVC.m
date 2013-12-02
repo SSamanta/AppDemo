@@ -12,7 +12,7 @@
 #import "CustomAppCell.h"
 #import "AppDetailsVC.h"
 #import "UtilityManager.h"
-
+@import QuartzCore;
 @interface RootVC ()
 @property (nonatomic) NSArray *apps;
 @property (weak,nonatomic) IBOutlet UITableView *tableView;
@@ -72,5 +72,7 @@
     [self.navigationController pushViewController:appDetailsVC animated:YES];
     [appDetailsVC setDataSource:app];
 }
-
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+        //[UtilityManager addCustomAnimationInView:cell];
+}
 @end

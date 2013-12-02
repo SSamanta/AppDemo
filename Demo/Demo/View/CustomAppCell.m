@@ -7,6 +7,7 @@
 //
 #import "WebServiceManager.h"
 #import "CustomAppCell.h"
+#import "UtilityManager.h"
 @interface CustomAppCell()
 @property (weak,nonatomic) IBOutlet UILabel *appNameLbl;
 @property (weak,nonatomic) IBOutlet UILabel *appCategoryNameLbl;
@@ -32,12 +33,18 @@
 - (void)setUIWithDataSource:(App *)app {
     self.appNameLbl.text = app.appName;
     self.appCategoryNameLbl.text = app.appCategoryName;
-    [WebServiceManager fetchImageDataWithLink:app.appIconLink OnCompletion:^(NSData *data, NSError *error) {
-        if (!error) {
-            self.appIconImageView.image = [UIImage imageWithData:data];
-        }else {
-            // show place holder image here
-        }
-    }];
+    NSData *localImageData = [UtilityManager getImageDataFromLocalFile:[NSString stringWithFormat:@"%@.png",app.appName]];
+    if (localImageData) {
+        self.appIconImageView.image = [UIImage imageWithData:localImageData];
+    }else {
+        [WebServiceManager fetchImageDataWithLink:app.appIconLink OnCompletion:^(NSData *data, NSError *error) {
+            if (!error) {
+                [UtilityManager storeImageData:data asName:[NSString stringWithFormat:@"%@.png",app.appName]];
+                self.appIconImageView.image = [UIImage imageWithData:data];
+            }else {
+                    // show place holder image here
+            }
+        }];
+    }
 }
 @end
